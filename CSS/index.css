@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  top: 0;
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background: whitesmoke;
+  /*border-bottom: 5px solid rgba(0, 0, 0, 0.62);*/
+  z-index: 10;
+}
+
+/*Nav bar, med sticky-funksjon slik at den følger med nedover siden*/
+nav {
+  position: sticky;
+  top: 0%;
+  z-index: 5;
+}
+
+/*Uordnet liste, denne gir plassering og farge til headeren*/
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  box-sizing: border-box;
+  padding: 10px;
+  background: whitesmoke;
+}
+
+li {
+  margin-top: 1%;
+  list-style: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 2%;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #240090; /* hva gjør denne?*/
+}
+
+/*Animasjon til nav-linkene på høyre side*/
+.navLinks a {
+  transition: all 0.3s ease 0s;
+}
+
+#Aquatic a {
+  color: #5ab9ea;
+}
+
+.navLinks #Aquatic a:hover {
+  color: #ff9c6d;
+  text-decoration: underline 2px solid white;
+}
+
+#Terrestrial a {
+  color: #61892f;
+}
+
+.navLinks #Terrestrial a:hover {
+  color: #ff9c6d;
+  text-decoration: underline 2px solid white;
+}
+
+#logo {
+  padding: 5px;
+  margin: 5px;
+}
+.icon {
+  height: 50px;
+  width: 70px;
+  padding: 5px;
+  margin-right: auto;
+  border-radius: 40px;
+  transition: box-shadow 0.3s;
+}
+
+/*Animasjon til hjemknappen*/
+.icon:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.99);
+}
+
+/*Lager mellomrommet mellom nav-linkene og hjemknappen*/
+.buttons {
+  justify-content: space-between;
+  justify-content: right;
+}
+
+#backgroundImg {
+  height: 100vh;
+  width: 100vw;
+  filter: blur(8px);
+  transform: scale(1.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+#mainpageHeader {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 30%;
+  left: 50%;
+  justify-content: center;
+  z-index: 2;
+  font-family: "Merriweather", "Lucida Handwriting", serif, monospace;
+  font-size: 1.5rem;
+  font-style: italic;
+  /* font-variant: small-caps;*/
+  /*text-decoration: dashed underline #fd5959;*/
+
+  color: black;
+  background: none;
+}
+
+#mainpageTextBox {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 55%;
+  left: 50%;
+  z-index: 2;
+  justify-content: center;
+  font-size: medium;
+  font-family: "Quiksand", sans-serif;
+  background: none;
+  color: white;
+}
+
+/*#quote  {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 85%;
+  z-index: 2;
+  justify-content: center;
+  font-size: medium;
+  font-weight: 1000;
+  font-weight: bolder;
+  background: none;
+  color: #fd5959;
+} */
+
+#terrestrialButton {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 25%;
+  z-index: 3;
+  height: 100px;
+  width: 250px;
+  background-color: #61892f;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#aquaticButton {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 90%;
+  left: 75%;
+  z-index: 3;
+  height: 100px;
+  width: 250px;
+  background-color: #5f6caf;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-variant: small-caps;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#terrestrialButton {
+  opacity: 1;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80px 60px;
+}
+
+#terrestrialButton:hover p {
+  visibility: hidden;
+}
+
+#terrestrialButton:hover {
+  background-image: url(/images/kangaroo-icon.png);
+  box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.518) inset;
+}
+
+#aquaticButton {
+  opacity: 1;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+
+#aquaticButton:hover p {
+  visibility: hidden;
+}
+
+#aquaticButton:hover {
+  background-image: url(/images/turtle-icon.png);
+  box-shadow: 0 0 0 80px rgba(0, 0, 0, 0.518) inset;
+}

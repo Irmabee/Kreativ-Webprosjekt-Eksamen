@@ -1,0 +1,431 @@
+body {
+  height: 200vh;
+  background: linear-gradient(50deg, #a1f480 0%, #00bbf0 51%, #3dbdc2 85%);
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  background: whitesmoke;
+  /*border-bottom: 5px solid rgba(0, 0, 0, 0.62);*/
+  z-index: 10;
+}
+
+/*Nav bar, med sticky-funksjon slik at den følger med nedover siden*/
+nav {
+  position: sticky;
+  top: 0%;
+  z-index: 5;
+}
+
+/*Uordnet liste, denne gir plassering og farge til headeren*/
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  box-sizing: border-box;
+  padding: 10px;
+  background: whitesmoke;
+}
+
+li {
+  margin-top: 1%;
+  list-style: none;
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 2%;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #240090;
+}
+
+/*Animasjon til nav-linkene på høyre side*/
+.navLinks a {
+  transition: all 0.3s ease 0s;
+}
+
+#Aquatic a {
+  color: #5ab9ea;
+}
+
+.navLinks #Aquatic a:hover {
+  color: white;
+  text-decoration: underline 2px solid white;
+}
+
+#Terrestrial a {
+  color: #61892f;
+}
+
+.navLinks #Terrestrial a:hover {
+  color: white;
+  text-decoration: underline 2px solid white;
+}
+
+/*Gjør at logoen/hjemknappen holder seg på venstre side*/
+#logo {
+  margin-right: auto;
+  padding: 5px;
+}
+
+.icon {
+  height: 40px;
+  width: 60px;
+  padding: 5px;
+  margin-right: auto;
+  border-radius: 40px;
+  transition: box-shadow 0.3s;
+}
+
+/*Animasjon til hjemknappen*/
+.icon:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.99);
+}
+
+/*Lager mellomrommet mellom nav-linkene og hjemknappen*/
+.buttons {
+  justify-content: space-between;
+  justify-content: right;
+}
+
+.sky {
+  position: absolute;
+  right: 0%;
+  bottom: 40%;
+  animation-name: fly;
+  animation-duration: 20s;
+}
+
+@keyframes fly {
+  100% {
+    right: 0%;
+  }
+  0% {
+    right: 50%;
+  }
+}
+
+.sand {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+/* treene var på 100%, byttet til 90% slik at det ikke blir scroll */
+.tre {
+  position: absolute;
+  height: 90%;
+  left: 10%;
+}
+
+.tree {
+  position: absolute;
+  height: 90%;
+  left: 65%;
+}
+
+.tumbleweed {
+  position: absolute;
+  height: 8%;
+  bottom: 2%;
+  animation-name: tumble;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/*tumbleweed animasjon rotering*/
+@keyframes tumble {
+  0% {
+    right: 0%;
+    transform: rotate(0deg);
+  }
+  100% {
+    right: 100%;
+    transform: rotate(-360deg);
+  }
+}
+
+.koala {
+  position: absolute;
+  height: 5%;
+  right: 75%;
+  bottom: 70%;
+  animation-name: move;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+/* animere koalaen slik at den beveger seg opp og ned*/
+@keyframes move {
+  0% {
+    bottom: 75%;
+  }
+  50% {
+    bottom: 10%;
+  }
+  100% {
+    bottom: 75%;
+  }
+}
+
+.owl {
+  position: absolute;
+  height: 4%;
+  left: 75%;
+  bottom: 83%;
+}
+
+.owl:hover {
+  transform: scale(1.5);
+  transition: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+#kangaroo {
+  height: 270px;
+  position: absolute;
+  left: -20%;
+  bottom: 5%;
+  animation-name: jump;
+  animation-duration: 3.7s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+  animation-iteration-count: infinite;
+}
+
+/*kenguru animasjon*/
+@keyframes jump {
+  0% {
+    bottom: 0px;
+    left: -200px;
+  }
+  5% {
+    bottom: 60px;
+    left: -110px;
+  }
+  10% {
+    bottom: 120px;
+    left: -20px;
+  }
+  15% {
+    bottom: 140px;
+    left: 70px;
+  }
+  20% {
+    bottom: 60px;
+    left: 160px;
+  }
+  25% {
+    bottom: 0px;
+    left: 250px;
+  }
+  30% {
+    bottom: 60px;
+    left: 340px;
+  }
+  35% {
+    bottom: 120px;
+    left: 430px;
+  }
+  40% {
+    bottom: 140px;
+    left: 520px;
+  }
+  45% {
+    bottom: 60px;
+    left: 610px;
+  }
+  50% {
+    bottom: 0px;
+    left: 700px;
+  }
+  55% {
+    bottom: 60px;
+    left: 790px;
+  }
+  60% {
+    bottom: 120px;
+    left: 880px;
+  }
+  65% {
+    bottom: 140px;
+    left: 970px;
+  }
+  70% {
+    bottom: 60px;
+    left: 1050px;
+  }
+  75% {
+    bottom: 0px;
+    left: 1140px;
+  }
+  80% {
+    bottom: 60px;
+    left: 1230px;
+  }
+  85% {
+    bottom: 120px;
+    left: 1320px;
+  }
+  90% {
+    bottom: 140px;
+    left: 1410px;
+  }
+  95% {
+    bottom: 60px;
+    left: 1500px;
+  }
+  100% {
+    bottom: 0px;
+    left: 1590px;
+  }
+}
+
+/* selve boksen med border og alt, width og height osv må samsvare med bildet sin width og height*/
+.infoWrapper {
+  display: flex;
+  position: relative;
+  /*border: 3px solid greenyellow; */
+  color: black;
+  /* padding: 5px;
+   margin: 30px;*/
+  width: 250px;
+  /*background-color: white;*/
+  transform: translateX(50%) translateY(50%);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+#divImageKoala {
+  top: 10%;
+  left: 15%;
+}
+
+#divImageKangaroo {
+  top: 42%;
+  left: 45%;
+}
+
+#divImageBarkingOwl {
+  top: -29%;
+  left: 49%;
+}
+
+/* koala bilde  */
+.koalaImage {
+  display: block;
+  width: 250px;
+  border-radius: 3%; /* runder av hjørnene på bildet */
+  justify-content: center;
+  align-content: center;
+}
+
+.kangarooImage {
+  display: block;
+  width: 250px;
+  border-radius: 3%; /* runder av hjørnene på bildet */
+  justify-content: center;
+  align-content: center;
+}
+
+.barkingOwlimage {
+  display: block;
+  width: 250px;
+  border-radius: 3%; /* runder av hjørnene på bildet */
+  justify-content: center;
+  align-content: center;
+}
+
+/* tekst og boksen som dukker opp når man håvvrer */
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* bilde får bittelitt sort i seg*/
+  color: white;
+  font-family: "Quicksand", sans-serif;
+
+  display: flex;
+  flex-direction: column; /* teksten og tittelen blir satt i en kolonne*/
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* bilde blir transparent */
+  transition: opacity 0.25s;
+}
+
+.imageOverlay > * {
+  transform: translateY(30px); /* tekst-boksen beveger seg nedenfra (Y) og opp*/
+  transition: transform 0.8s;
+}
+.imageOverlay:hover {
+  opacity: 1;
+}
+.imageOverlay:hover > * {
+  transform: translateY(0);
+}
+
+#imageTitleKoala,
+#imageKangarooTitle,
+#imageBarkingOwlTitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.imageDescription {
+  font-size: 0.7em;
+  margin-top: 0.5em;
+  margin-right: 1em;
+  margin-left: 1em;
+  font-weight: bold;
+}
+
+.infoDivClipped {
+  /*lille sirkelen med i'en */
+  clip-path: circle(
+    10% at 90% 50%
+  ); /* hvor sirkelen er klippet ut fra bildet */
+
+  /*background: rgb(41, 195, 215);*/
+
+  /*border-radius: 10%;*/
+  width: 250px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.infoDivClipped:hover {
+  clip-path: circle(80%); /* formen når den utfolder seg */
+}
+
+.i {
+  color: rgba(9, 9, 9, 0.868);
+  font-weight: bold;
+  font-size: large;
+
+  float: right; /*i'en havner til høyre*/
+
+  margin-right: 10%;
+  margin-top: -40%;
+  margin-bottom: 0%;
+  position: relative;
+}
